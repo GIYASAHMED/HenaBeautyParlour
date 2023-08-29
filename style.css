@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://e0.pxfuel.com/wallpapers/87/705/desktop-wallpaper-hair-salon-hair-and-beauty-salon-hair-saloon.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background: RED; */
+    position: relative;
+}
+.overlay{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(108, 147, 219, 0.267);
+}
+H1{
+    font-size: 10VW;
+}
