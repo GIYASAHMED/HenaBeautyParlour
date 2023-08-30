@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 *{
     margin: 0;
@@ -11,12 +11,22 @@ html, body{
     width: 100%;
     height: 100%;
 }
+li{
+    list-style: none;
+    
+}
+a{
+    text-decoration: none;
+    color: #ece0e0;
+}
 #main{
     width: 100vw;
     height: 100vh;
-    background-image: url('https://e0.pxfuel.com/wallpapers/87/705/desktop-wallpaper-hair-salon-hair-and-beauty-salon-hair-saloon.jpg');
+    background-image: url('girlImg.jpg');
+    /*background-image: url('https://e0.pxfuel.com/wallpapers/87/705/desktop-wallpaper-hair-salon-hair-and-beauty-salon-hair-saloon.jpg');*/
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-position: right;
     /* background: RED; */
     position: relative;
 }
@@ -25,12 +35,50 @@ html, body{
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(108, 147, 219, 0.267);
+    background: rgba(1, 8, 22, 0.267);
 }
-H1{
-    font-size: 10VW;
+h1{
+    font-size: 20VW;
+}
+h3{
+    font-size: 5vw;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+.main_content{
+    /* border: 1px solid rgb(196, 236, 143); */
+    padding: 10px 25px;
+    text-align: center;
+    color: rgb(27, 204, 27);
+    box-shadow: 0 0 10px #000;
+}
+#navbar{
+    width: 100%;
+    height: 70px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    position: absolute;
+}
+.menu_bar{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    font-family: 'Satisfy', cursive;
+    font-size: 40px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+#navbar li{
+    /* border: 1px solid red; */
+    padding: 5px 10px;
+    cursor: pointer;
 }
