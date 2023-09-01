@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HENA</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Icon CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
     <div id="main">
         <div class="overlay">
             <div class="main_content">
-                <h1>HENA</h1><br>
-                <h3>unisex hair and beauty parlour</h3>
+                <span id="premier">premier esthetics</span>
+                <h1 id="main_heading">HENA</h1><br>
+                <h3 id="main_subheading">unisex hair and beauty parlour</h3>
             </div>
         </div>
 
@@ -19,12 +22,151 @@
             <div><a href="#" class="logo">Hena</a></div>
             <div class="menu_bar">
                 <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
+                <li><a href="#about">ABOUT</a></li>
                 <li><a href="#">SERVICES</a></li>
                 <li><a href="#">PRODUCT</a></li>
                 <li><a href="#">CONTACT</a></li>
             </div>
+            <div class="menu_icon">
+                <i class="ri-menu-line"></i>
+            </div>
         </nav>
     </div>
+    <section id="type">
+        <div class="types">
+            <div class="saloon">
+                <div class="img_box1">
+                    <!-- <img src="hair.jpeg" alt=""> -->
+                </div>
+                <div class="img_content">
+                    <span id="premier" class="hair">hair</span>
+                    <h2>SALON</h2>
+                    <p>if you want to change your style or just keep your hair cut up to date here is the best place you're looking for</p>
+                </div>
+                <button class="btn">LEARN MORE</button>
+            </div>
+
+            <div class="saloon">
+                <div class="img_box_middle">
+                    <img src="beauty1.jpeg" alt="">
+                </div>
+                <div class="img_middle_overlay">
+                    <div class="img_content img_content_middle">
+                        <span id="premier">beauty</span>
+                        <h2>SALON</h2>
+                        <p>We're a full service salon. We offer the latest and highest quality services for all of your family members.</p>
+                    </div>
+                    <button class="btn">LEARN MORE</button>
+                </div>
+                 
+            </div>
+
+            <div class="saloon">
+                <div class="img_box2">
+                    <!-- <img src="wellness.jpeg" alt=""> -->
+                </div>
+                <div class="img_content">
+                    <span id="premier" class="hair">wellness</span>
+                    <h2>SALON</h2>
+                    <p>we offer a wide variety of services, focusing on personal aesthetics. Our practitioners are well-practiced.
+                    </p>
+                </div>
+                <button class="btn">LEARN MORE</button>
+            
+            </div>
+        </div>
+    </section>
+    <section id="offer">
+        <div class="offer_overlay">
+            <div class="offer_content">
+                <span id="premier" class="offer_premier">book your visit online</span>
+                <h1 class="offer_title">SAVE UP TO <br> <span id="dis">30%</span>  OFF</h1>
+                <p>we make a discount only for those our customers who make an appointment, so hurry up to make an appointment with our specialists to save up to 30%!</p>
+                <button class="btn">LEARN MORE</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="welcome">
+        <div class="welcome_content">
+            <div class="img_box">
+                <img src="welcome.jpeg" alt="">
+            </div>
+            <div class="welcome_heading">
+                <span id="premier">welcome to</span>
+                <h1 id="welcome_he">HENA</h1>
+                <p>we value our clients and know exatly what will suit you more and how to implement your most creative ideas into reality to enhance your natural looks and make you look gorgeous whenever you go ! <span class="trust">Trust us to make you look special!</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about_content">
+            <div class="about_row1">
+                <div class="about_heading">
+                    <span id="premier">about</span>
+                    <h1>HENA</h1>
+                    <div class="abt_overlay">
+                        <div class="sub_overlay"></div>
+                    </div>
+                </div>
+                <div class="row_1sub_heading">
+                    <h4>Our Hena saloon was founded in 2023, and since then we are trying to make our customers more happy and confident! </h4>
+                    <p>We started as a group of inspired hairdressers and stylists. Now we have a full-fledged team of specialists, who khow what they do and have all the skills to enhance the natural beauty in you! We work with high-quality equipment and use high-quality materials only!</p>
+                </div>
+            </div>
+
+
+            <div class="about_row2">
+                <div class="about_items">
+                    <div class="icon">
+                        <i class="ri-scissors-line"></i>
+                    </div>
+                    <h3>From hair color makeover to stylish highlights</h3>
+                    <p>From just a color retouch or a color correction to an extreme make over our grat colorists will show you a huge variety of color to match your skin tone</p>
+                </div>
+                <div class="about_items">
+                    <div class="icon">
+                        <i class="ri-eye-line"></i>
+                    </div>
+                    <h3>Makeup artist services will make your beauty shine </h3>
+                    <p>Our make-up artists will make your appearance memorable and bright,and take care of your skin's health! We work only with the top quality cosmetics!</p>
+                    
+                </div>
+                <div class="about_items">
+                    <div class="icon">
+                        <i class="ri-leaf-fill"></i>
+                    </div>
+                    <h3>Natural skin care for face and body & SPA</h3>
+                    <P>Exfoliation improves the texture of the skin, helps reduce lines and wrinkles,and allows deeper absorption of moisturizers and antioxidants</P>
+                    
+                </div>
+                <div class="about_items">
+                    <div class="icon">
+                        <i class="ri-user-follow-line"></i>
+                    </div>
+                    <h3>Personal shopping and styling services</h3>
+                    <p>We offer a premiere image consulting service no other styling beauty salon offers. You, as our client, will benefit from a team of two personal stylists!</p> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about_features">
+        <div class="features_gallary">
+            <div class="gallary_content">
+                <img src="gallary1.jpeg" alt="">
+                <img src="gallary2.webp" alt="">
+                <img src="gallary3.jpeg" alt="">
+                <img src="gallary4.webp" alt="">
+                <img src="gallary5.jpeg" alt="">
+                <img src="gallary6.jpeg" alt="">
+                <img src="gallary7.webp" alt="">
+                <img src="gallary8.jpeg" alt="">
+            </div>
+        </div>
+    </section>
 </body>
 </html>

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 *{
     margin: 0;
@@ -10,6 +11,8 @@
 html, body{
     width: 100%;
     height: 100%;
+    /* overflow-y: hidden; */
+    scroll-behavior:smooth;
 }
 li{
     list-style: none;
@@ -20,14 +23,13 @@ a{
     color: #ece0e0;
 }
 #main{
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     background-image: url('girlImg.jpg');
     /*background-image: url('https://e0.pxfuel.com/wallpapers/87/705/desktop-wallpaper-hair-salon-hair-and-beauty-salon-hair-saloon.jpg');*/
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
-    /* background: RED; */
+    background-position: left;
     position: relative;
 }
 .overlay{
@@ -41,36 +43,69 @@ a{
     height: 100%;
     background: rgba(1, 8, 22, 0.267);
 }
-h1{
-    font-size: 20VW;
+#main_heading{
+    font-size: 18VW;
+    animation: zoom 0.6s linear;
+
 }
-h3{
-    font-size: 5vw;
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+        
+    }
+    100%{
+        transform: scale(1);
+        
+    }
+}
+#main_subheading{
+    font-size: 4vw;
     text-transform: uppercase;
     color: aliceblue;
+    animation: sw 1.2s linear;
+    word-spacing: 5px;
+    letter-spacing: 10px;
+}
+@keyframes sw {
+   0%{
+    transform: scale(0);
+   }
+   100%{
+    transform: scale(1);
+   } 
 }
 .main_content{
     /* border: 1px solid rgb(196, 236, 143); */
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
     padding: 10px 25px;
     text-align: center;
     color: rgb(27, 204, 27);
     box-shadow: 0 0 10px #000;
 }
+#premier{
+    font-size: 60px;
+    font-family: 'Great Vibes', cursive;
+    color: rgb(230, 131, 147);
+}
 #navbar{
     width: 100%;
     height: 70px;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.322);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
     position: absolute;
-    opacity: 0;
+    position: fixed;
+    z-index: 99;
 }
 .menu_bar{
     width: 50%;
     display: flex;
     justify-content: space-between;
+    /* display: none; */
 }
 .logo{
     font-family: 'Satisfy', cursive;
@@ -82,4 +117,332 @@ h3{
     /* border: 1px solid red; */
     padding: 5px 10px;
     cursor: pointer;
+    position: relative;
+    margin-right: 20px;
+}
+#navbar li::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0; 
+    height: 2px;
+    background: #fff;
+    transition: width 0.5s linear;
+}
+#navbar li:hover:after{
+    width: 100%;
+    transition: width 0.2s linear;
+}
+.menu_icon{
+    cursor: pointer;
+    display: none;
+}
+.menu_icon i{
+    font-size: 30px;
+    color: #fff;
+}
+
+
+/* Types section */
+#type{
+    width: 100%; 
+    background: #ece0e0;
+}
+.types{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 20px;
+}
+.types .saloon{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+}
+/* .types .saloon img{
+    width: 100%;
+} */
+.img_box1{
+    width: 100%;
+    height: 300px;
+    background-image: url('beauty.jpeg');
+    background-position: top;
+    background-size: cover;
+}
+.img_box2 {
+    width: 100%;
+    height: 300px;
+    background-image: url('wellness.jpeg');
+    background-position: top;
+    background-size: cover;
+}
+.img_box_middle{
+    position: relative;
+}
+.img_middle_overlay{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    background: rgba(0, 0, 0, 0.342);
+    margin-top: 50px;
+    transform: rotate(8deg);
+}
+.img_content_middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img_content_middle h2{
+    color: #fff;
+}
+.img_content_middle p{
+    color: #ffffff !important;
+}
+.img_box_middle img{
+    width: 100%;
+    height: 100%;
+}
+.img_content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.img_content h2{
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.img_content p{
+    padding: 0 25px;
+    color: rgb(92, 71, 71);
+}
+.btn{
+    width: 130px;
+    height: 40px;
+    padding: 5px 10px;
+    background: rgb(230, 131, 147);
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#offer{
+    width: 100%;
+    height: 100vh;
+    background-image: url("offer.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.offer_overlay{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.692);
+}
+.offer_content{
+    width: 70%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid white; */
+}
+.offer_title{
+    font-size: 10vw;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.offer_premier{
+    letter-spacing: 8px;
+}
+.offer_content p{
+    font-size: 20px;
+    color: antiquewhite;
+    letter-spacing: 1px;
+    text-align: center;
+}
+#dis{
+    color: rgb(230, 131, 147);
+    position: absolute;
+    left: 0px;
+    transform: rotate(-8deg);
+    text-shadow: 2px 2px 2px #220e0e;
+}
+
+
+.welcome_content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+}
+.img_box{
+    width: 45%;
+    
+}
+.img_box img{
+    width: 100%;
+    border-radius: 5px;
+}
+.welcome_heading{
+    width: 50%;
+}
+#welcome_he{
+    font-size: 8vw;
+    letter-spacing: 2px;
+}
+.welcome_heading p{
+    font-size: 18px;
+    color: rgb(75, 73, 70);
+    letter-spacing: 1px;
+    text-align: justify;
+    position: relative;
+}
+.trust{
+    font-size: 25px;
+    transform: rotate(-5deg);
+    position: absolute;
+    left: 200px;
+    bottom: -38px;
+    color: rgb(230, 131, 147);
+}
+
+
+#about{
+    width: 100%;
+    height: 100vh;
+    background: lightcyan;
+}
+.about_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+}
+.about_row1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about_heading{
+    width: 40%;
+    position: relative;
+}
+.abt_overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.075);
+    transform: rotate(-5deg);
+}
+.sub_overlay{
+    display: flex;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border: 2px solid rgba(69, 221, 82, 0.315);
+    transform: rotate(15deg);
+}
+.about_row1 h1{
+    font-size: 8vw;
+    margin-left: 50px;
+}
+.row_1sub_heading{
+    width: 55%;
+}
+.row_1sub_heading h4{
+    font-size: 25px;
+}
+.row_1sub_heading p{
+    font-size: 18px;
+    color: rgb(75, 73, 70);
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.about_row2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.about_items{
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 0 20px;
+}
+.icon{
+    width: 100px;
+    height: 100px;
+    background: rgb(230, 131, 147);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon i{
+    font-size: 30px;
+    color: #fff;
+}
+.about_items h3{
+    font-size: 20px;
+    color: #000;
+    letter-spacing: normal;
+    margin: 15px 0;
+}
+.about_items p{
+    font-size: 16px;
+    color: rgb(75, 73, 70);
+    letter-spacing: .7px;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+#about_features{
+    width: 100%;
+    height: 100%;
+}
+.features_gallary{
+    padding: 50px 20px;
+}
+.gallary_content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+.gallary_content img{
+    width: 100%;
+    height: 100%;
+    transition: scale 0.2s linear;
+}
+.gallary_content img:hover{
+    scale: 1.1;
+    transition: scale 0.5s linear;
 }
