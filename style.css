@@ -102,10 +102,24 @@ a{
     z-index: 99;
 }
 .menu_bar{
-    width: 50%;
+    width: 0;
+    opacity: 0;
+    transition: width 0.5s linear;
+}
+.active{
+    display: block;
     display: flex;
-    justify-content: space-between;
-    /* display: none; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.377);
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 0;
+    right: 0;
+    opacity: 1;
+    transition: width 0.5s linear; 
 }
 .logo{
     font-family: 'Satisfy', cursive;
@@ -119,6 +133,7 @@ a{
     cursor: pointer;
     position: relative;
     margin-right: 20px;
+    margin-bottom: 50px;
 }
 #navbar li::after{
     position: absolute;
@@ -136,7 +151,8 @@ a{
 }
 .menu_icon{
     cursor: pointer;
-    display: none;
+    position: absolute;
+    right: 50px;
 }
 .menu_icon i{
     font-size: 30px;
@@ -445,4 +461,102 @@ a{
 .gallary_content img:hover{
     scale: 1.1;
     transition: scale 0.5s linear;
+}
+
+/*  services section  */
+
+#services{
+    width: 100%;
+    background: lightcyan;
+    position: absolute;
+}
+.services_container{
+    text-align: center;
+    margin-top: 30px;
+    padding: 50px 20px;
+}
+.services_container h1{
+    font-size: 7vw;
+}
+.service_content_wrapper{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 50px;
+}
+.service_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-start;
+    /* background: red; */
+    padding: 25px 40px;
+}
+.service_content h4{
+    font-size: 3vw;
+}
+#ser{
+    font-size: 40px;
+    color: rgb(230, 131, 147);
+    font-weight: 300;
+}
+#service_list{
+    margin-left: 25px;
+}
+#service_list li{
+    position: relative;
+    text-align: start;
+    font-size: 18px;
+}
+#service_list li::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgb(230, 131, 147);
+    border-radius: 50%;
+    left: 0;
+    top: 40%;
+    margin-left: -30px;
+}
+.ser_btn{
+    width: 250px;
+    height: 50px;
+    color: #fff;
+    background: rgb(230, 131, 147);
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 25px;
+}
+#award{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.award_bg{
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    background-image: url("award.jpeg");
+    background-size: cover;
+    background-position: right;
+    top: 900px;
+}
+.award_bg_overlay{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.452);
+}
+.award_content{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
