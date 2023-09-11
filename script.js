@@ -1,6 +1,7 @@
 let menu = document.querySelector('#menu')
 let menu_icon = document.querySelector('.menu_icon')
 let menu_bar = document.querySelector('.menu_bar')
+let ll = document.querySelectorAll('.ll')
 
 
 let hh = 0
@@ -17,4 +18,12 @@ menu_icon.addEventListener('click', function () {
         hh = 0
     }
     
+})
+
+ll.forEach(function (elem) {
+    elem.addEventListener('click', function () {
+        menu_bar.classList.remove('active')
+        menu_icon.innerHTML = `<i class="ri-menu-line" id="menu"></i>`
+        hh = 0
+    })
 })
