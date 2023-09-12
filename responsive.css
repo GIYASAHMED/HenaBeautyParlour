@@ -15,4 +15,10 @@
             position: relative;
             margin-bottom: 30px;
         }
+        .offer_title {
+            font-size: 12vw;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
 }
