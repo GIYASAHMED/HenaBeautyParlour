@@ -67,7 +67,7 @@
             margin-top: 50px;
         }
         #premier{
-            font-size: 80px;
+            font-size: 60px;
         }
         .about_row2 {
             display: grid;
@@ -106,5 +106,16 @@
         }
         .service_content h4 {
             font-size: 5vw;
+        }
+        .offer_content {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #offer {
+            height: 80vh;
+            
         }
 }
